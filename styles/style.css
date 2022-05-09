@@ -1,0 +1,568 @@
+@charset "UTF-8";
+* {
+  font-family: "Noto Sans Tc", sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* button:hover {
+  cursor: pointer;
+}
+
+* a {
+  text-decoration: none;
+}
+
+* .mb,
+* .mbBackToTop,
+* .mobileFooter,
+* .mobileBottom,
+* .mobileLogin,
+* .mobileEn,
+* .mobile {
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  pointer-events: none;
+}
+
+header section.enVersion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header section.enVersion a {
+  display: block;
+  width: 86.66vw;
+  text-align: right;
+  margin-top: 47px;
+  color: #F9665C;
+}
+
+header section.headerLogo {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header section.headerLogo div.logoLeft {
+  width: 10.34vw;
+  border-bottom: 2px solid #e1e1e1;
+}
+
+header section.headerLogo img.logo {
+  width: 20.13vw;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+
+header section.headerLogo div.logoRight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 64.86vw;
+  border-bottom: 2px solid #e1e1e1;
+}
+
+header section.headerLogo div.logoRight nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 23.40vw;
+  width: 28.61vw;
+}
+
+header section.headerLogo div.logoRight nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header section.headerLogo div.logoRight nav ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+header section.headerLogo div.logoRight nav ul li a {
+  margin-right: 2.57vw;
+  color: #9a9a9a;
+  padding: 0 1.5vw 2.0vw 1.5vw;
+}
+
+header section.headerLogo div.logoRight nav ul li a.active {
+  color: #000;
+  border-bottom: 1.82px solid #F9665C;
+  -webkit-transform: translateY(1.82px);
+          transform: translateY(1.82px);
+}
+
+header section.headerLogo div.logoRight nav ul li button {
+  color: #ffffff;
+  background-color: #F9665C;
+  padding: 1.25vw 1.04vw 1.25vw 1.04vw;
+  margin-bottom: 0.63vw;
+  border: none;
+  border-radius: 0.35vw;
+}
+
+main div.card {
+  margin: 0 15.07vw 0.97vw 14.03vw;
+  -webkit-box-shadow: 1px 1px 2.5px 0px #c0c0c0, -1px -1px 2.5px 0px #c0c0c0;
+          box-shadow: 1px 1px 2.5px 0px #c0c0c0, -1px -1px 2.5px 0px #c0c0c0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main div.card img {
+  margin: 1.67vw 3.47vw 1.67vw 1.81vw;
+}
+
+main div.card div.theme {
+  width: 29.38vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main div.card div.theme a.themeName {
+  font-size: 1.5625rem;
+  text-decoration: none;
+  color: #6b6b6b;
+}
+
+main div.card div.table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 29.58vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main div.card div.table table.dateAndPlace tr td {
+  height: 1.81vw;
+}
+
+main div.card div.table table.dateAndPlace tr td.redDate {
+  color: #F9665C;
+  width: 6.67vw;
+}
+
+main div.card div.table table.dateAndPlace tr td.redPlace {
+  color: #F9665C;
+  width: 6.67vw;
+}
+
+main div.card div.table table.dateAndPlace tr td.dateContent {
+  width: 17.22vw;
+}
+
+main div.card div.table table.dateAndPlace tr td.placeContent {
+  width: 17.22vw;
+}
+
+main div.card1 {
+  margin-top: 5.14vw;
+}
+
+main div.btnToTop {
+  height: 3.96vw;
+  width: 97.01vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+main div.btnToTop button.backToTop {
+  border: none;
+  border-radius: 0.35vw;
+  z-index: 5;
+  position: fixed;
+  top: 85vh;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 9.38vw;
+  background-color: #f3f3f3;
+  position: relative;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer section.tnGvn {
+  margin-left: 12.64vw;
+}
+
+footer section.tnGvn img.pc {
+  margin-top: 1.25vw;
+  height: 3.61vw;
+}
+
+footer section.helper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 11.67vw;
+}
+
+footer section.helper img.helper1 {
+  height: 3.06vw;
+}
+
+footer section.helper img.helper2 {
+  height: 2.5vw;
+}
+
+footer section.helper img.mb {
+  height: 0;
+}
+
+footer section.claim {
+  position: absolute;
+  top: 50%;
+  margin-left: 12.64vw;
+}
+
+footer section.claim p {
+  color: #9a9a9a;
+  font-size: 0.97vw;
+}
+
+@media screen and (max-width: 950px) {
+  main div.card div.theme a.themeName {
+    font-size: 1rem;
+  }
+  main div.btnToTop button.backToTop {
+    top: 90Vh;
+  }
+  footer {
+    height: 20vW;
+  }
+  footer section.tnGvn {
+    margin-left: 12.64vw;
+  }
+  footer section.tnGvn img.pc {
+    margin-top: 2.50vw;
+    height: 7.22vw;
+  }
+  footer section.helper img.helper1 {
+    height: 6.12vw;
+  }
+  footer section.helper img.helper2 {
+    height: 5vw;
+  }
+  footer section.helper img.mb {
+    height: 0;
+  }
+  footer section.claim {
+    position: absolute;
+    top: 50%;
+    margin-left: 12.64vw;
+  }
+  footer section.claim p {
+    font-size: 1.94vw;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  * .pc {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    pointer-events: none;
+    padding: 0;
+    margin: 0;
+  }
+  * .mb,
+  * .mbBackToTop,
+  * .mobileFooter,
+  * .mobileBottom,
+  * .mobileLogin,
+  * .mobileEn,
+  * .mobile {
+    opacity: 1;
+    pointer-events: all;
+  }
+  header section.headerLogo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header section.headerLogo div.logoLeft {
+    height: 0;
+    width: 0;
+  }
+  header section.headerLogo img.logo {
+    margin-top: 5.33vw;
+    margin-bottom: 11.47vw;
+    width: 92.21vw;
+  }
+  header section.headerLogo div.logoRight {
+    width: 100vw;
+  }
+  header section.headerLogo div.logoRight nav {
+    margin: 0;
+  }
+  header section.headerLogo div.logoRight nav ul li {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header section.headerLogo div.logoRight nav ul li a {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 45.87vw;
+    height: 8.27vw;
+  }
+  header section.headerLogo div.logoRight nav ul li a.mobileLeft {
+    margin-left: 4vw;
+  }
+  main {
+    opacity: 0;
+    height: 0;
+    width: 0;
+    pointer-events: none;
+  }
+  div.mobile {
+    height: auto;
+    width: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  div.mobile div.table {
+    margin-left: 4vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 85.33vw;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  div.mobile div.table table.dateAndPlace tr td {
+    height: 6.67vw;
+  }
+  div.mobile div.table table.dateAndPlace tr td.redDate {
+    color: #F9665C;
+    width: 19.47vw;
+  }
+  div.mobile div.table table.dateAndPlace tr td.redPlace {
+    color: #F9665C;
+    width: 19.47vw;
+  }
+  div.mobile div.table table.dateAndPlace tr td.dateContent {
+    width: 65.06vw;
+  }
+  div.mobile div.table table.dateAndPlace tr td.placeContent {
+    width: 65.06vw;
+  }
+  div.mobile div.in,
+  div.mobile div.out {
+    width: 100vw;
+  }
+  div.mobile div.in div.titleIn,
+  div.mobile div.in div.titleOut,
+  div.mobile div.out div.titleIn,
+  div.mobile div.out div.titleOut {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 16.80vw;
+    margin: 4vw;
+    border-bottom: 2px solid #f66;
+  }
+  div.mobile div.in div.titleIn p,
+  div.mobile div.in div.titleOut p,
+  div.mobile div.out div.titleIn p,
+  div.mobile div.out div.titleOut p {
+    font-size: 4.53vw;
+    color: #f66;
+  }
+  div.mobile div.in div.card,
+  div.mobile div.out div.card {
+    position: relative;
+    -webkit-box-shadow: 1px 1px 2.5px 0px #c0c0c0, -1px -1px 2.5px 0px #c0c0c0;
+            box-shadow: 1px 1px 2.5px 0px #c0c0c0, -1px -1px 2.5px 0px #c0c0c0;
+    height: 40.80vw;
+    width: 92.53vw;
+    margin: 0 4vw 4vw 4vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  div.mobile div.in div.card a,
+  div.mobile div.out div.card a {
+    margin-left: 4vw;
+    font-size: 5.33vw;
+    color: #6b6b6b;
+  }
+  div.mobile div.in div.card td.redDate,
+  div.mobile div.in div.card td.redPlace,
+  div.mobile div.out div.card td.redDate,
+  div.mobile div.out div.card td.redPlace {
+    color: #f66;
+  }
+  div.mobile div.in div.card img,
+  div.mobile div.out div.card img {
+    position: absolute;
+    width: 25.33vw;
+    height: 6.93vw;
+    left: 64vw;
+    top: 30.4vw;
+  }
+  footer {
+    height: 51.73vw;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer section.tnGvn {
+    margin-left: 4vw;
+    position: relative;
+  }
+  footer section.tnGvn img.mb {
+    margin-top: 4vw;
+    height: 14.67vw;
+    width: auto;
+  }
+  footer section.tnGvn div.mobileFooter {
+    height: auto;
+    width: auto;
+    position: absolute;
+    top: 18.67vw;
+  }
+  footer section.tnGvn div.mobileFooter p {
+    color: #9a9a9a;
+  }
+  footer section.tnGvn button.mbBackToTop {
+    height: auto;
+    width: auto;
+    border: none;
+    border-radius: 0.35vw;
+    z-index: 5;
+    position: absolute;
+    top: 3.47vw;
+    left: 83.2vw;
+  }
+  footer section.helper {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  footer section.helper img.helper1 {
+    content: url(../picture/ui/mobile/蕭壠.svg);
+    width: 39.2vw;
+    height: auto;
+  }
+  footer section.helper img.helper2 {
+    content: url(../picture/ui/mobile/總爺.svg);
+    width: 32.54vw;
+    height: auto;
+  }
+  footer section.helper img.pc {
+    height: 0;
+    width: 0;
+  }
+  footer section.claim {
+    left: -7.5%;
+    top: 70%;
+  }
+  footer section.claim p {
+    font-size: 3.73vw;
+  }
+  div.mobileBottom {
+    width: auto;
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  div.mobileBottom button {
+    color: #ffffff;
+    width: 50vw;
+    border: none;
+    height: 13.87vw;
+    text-align: center;
+    font-size: 4.53vW;
+  }
+  div.mobileBottom button img {
+    vertical-align: middle;
+  }
+  div.mobileBottom button.mobileLogin {
+    background-color: #f66;
+  }
+  div.mobileBottom button.mobileEn {
+    background-color: #ff7575;
+  }
+}
+/*# sourceMappingURL=style.css.map */
