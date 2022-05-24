@@ -9,6 +9,7 @@
     a {
         text-decoration: none;
     }
+    // 使手機相關初始為不顯現
     .mb, 
     .mbBackToTop, 
     .mobileFooter,
@@ -118,12 +119,10 @@ main {
                     td.redDate {
                         color: #F9665C;
                         width: 6.67vw;
-                        // padding: 0.76vw 0 0 2.15vw;
                     }
                     td.redPlace {
                         color: #F9665C;
                         width: 6.67vw;
-                        // padding: 0 0 0.76vw 2.15vw;
                     }
                     td.dateContent {
                         width: 17.22vw;
@@ -149,7 +148,6 @@ main {
             z-index: 5;
             position: fixed;
             top: 85vh;
-            // left: 90vw;
         }
     }
 }
@@ -338,12 +336,10 @@ footer {
                     td.redDate {
                         color: #F9665C;
                         width: 19.47vw;
-                        // padding: 0.76vw 0 0 2.15vw;
                     }
                     td.redPlace {
                         color: #F9665C;
                         width: 19.47vw;
-                        // padding: 0 0 0.76vw 2.15vw;
                     }
                     td.dateContent {
                         width: 65.06vw;
