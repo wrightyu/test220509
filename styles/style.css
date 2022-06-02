@@ -22,26 +22,19 @@
 * .mobileLogin,
 * .mobileEn,
 * .mobile {
-  padding: 0;
-  margin: 0;
-  opacity: 0;
-  height: 0;
-  width: 0;
-  pointer-events: none;
+  display: none;
 }
 
-header section.enVersion {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+header {
+  min-height: 10.42vw;
+  position: relative;
 }
 
-header section.enVersion a {
-  display: block;
-  width: 86.66vw;
-  text-align: right;
-  margin-top: 47px;
+header a.enVersion {
   color: #F9665C;
+  position: absolute;
+  top: calc(3.19vw - 16px);
+  left: calc(84.93vw - 16px);
 }
 
 header section.headerLogo {
@@ -60,6 +53,7 @@ header section.headerLogo div.logoLeft {
 }
 
 header section.headerLogo img.logo {
+  margin-top: 3.19vw;
   width: 20.13vw;
   -o-object-fit: contain;
      object-fit: contain;
@@ -124,8 +118,43 @@ header section.headerLogo div.logoRight nav ul li button {
   border-radius: 0.35vw;
 }
 
-main div.card {
-  margin: 0 15.07vw 0.97vw 14.03vw;
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: calc(100vh - 10.42vw - 9.38vw);
+}
+
+main div.cardOnTop {
+  min-height: 5.14vw;
+}
+
+main section.cardContent {
+  min-height: calc(100vh - 10.42vw - 9.38vw - 5.14vw - 3.96vw);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main section.cardContent div.cardSpace {
+  height: 0.97vw;
+}
+
+main section.cardContent div.card {
   -webkit-box-shadow: 1px 1px 2.5px 0px #c0c0c0, -1px -1px 2.5px 0px #c0c0c0;
           box-shadow: 1px 1px 2.5px 0px #c0c0c0, -1px -1px 2.5px 0px #c0c0c0;
   display: -webkit-box;
@@ -133,11 +162,22 @@ main div.card {
   display: flex;
 }
 
-main div.card img {
+main section.cardContent div.card div.cardImg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main section.cardContent div.card img {
   margin: 1.67vw 3.47vw 1.67vw 1.81vw;
 }
 
-main div.card div.theme {
+main section.cardContent div.card div.theme {
   width: 29.38vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -147,65 +187,52 @@ main div.card div.theme {
           align-items: center;
 }
 
-main div.card div.theme a.themeName {
+main section.cardContent div.card div.theme a.themeName {
   font-size: 1.5625rem;
   text-decoration: none;
   color: #6b6b6b;
 }
 
-main div.card div.table {
+main section.cardContent div.card div.table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 29.58vw;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
-main div.card div.table table.dateAndPlace tr td {
+main section.cardContent div.card div.table table.dateAndPlace tr td {
   height: 1.81vw;
 }
 
-main div.card div.table table.dateAndPlace tr td.redDate {
+main section.cardContent div.card div.table table.dateAndPlace tr td.redDate {
   color: #F9665C;
   width: 6.67vw;
 }
 
-main div.card div.table table.dateAndPlace tr td.redPlace {
+main section.cardContent div.card div.table table.dateAndPlace tr td.redPlace {
   color: #F9665C;
   width: 6.67vw;
 }
 
-main div.card div.table table.dateAndPlace tr td.dateContent {
+main section.cardContent div.card div.table table.dateAndPlace tr td.dateContent {
   width: 17.22vw;
 }
 
-main div.card div.table table.dateAndPlace tr td.placeContent {
+main section.cardContent div.card div.table table.dateAndPlace tr td.placeContent {
   width: 17.22vw;
 }
 
-main div.card1 {
-  margin-top: 5.14vw;
-}
-
-main div.btnToTop {
-  height: 3.96vw;
-  width: 97.01vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
-}
-
-main div.btnToTop button.backToTop {
+main button.backToTop {
   border: none;
   border-radius: 0.35vw;
   z-index: 5;
   position: fixed;
-  top: 85vh;
+  top: 80vh;
+  left: 95vw;
+}
+
+main div.cardBelow {
+  min-height: 3.96vw;
 }
 
 footer {
@@ -213,7 +240,7 @@ footer {
   display: -ms-flexbox;
   display: flex;
   width: 100vw;
-  height: 9.38vw;
+  min-height: 9.38vw;
   background-color: #f3f3f3;
   position: relative;
   -webkit-box-pack: justify;
@@ -270,12 +297,113 @@ footer section.claim p {
   font-size: 0.97vw;
 }
 
-@media screen and (max-width: 950px) {
-  main div.card div.theme a.themeName {
-    font-size: 1rem;
+@media screen and (max-width: 1265px) {
+  header a.enVersion {
+    font-size: 0.85rem;
+    left: calc(88.93vw - 16px);
   }
-  main div.btnToTop button.backToTop {
+  header section.headerLogo div.logoLeft {
+    width: 7.34vw;
+  }
+  header section.headerLogo div.logoRight {
+    width: 68.86vw;
+  }
+  header section.headerLogo div.logoRight nav {
+    margin-left: 30.40vw;
+  }
+  header section.headerLogo div.logoRight nav ul li {
+    font-size: 0.85rem;
+  }
+  header section.headerLogo div.logoRight nav ul li a {
+    margin-right: 1.57vw;
+  }
+  main div.cardOnTop {
+    min-height: 3.14vw;
+  }
+  main section.cardContent {
+    min-height: calc(100vh - 10.42vw - 9.38vw - 3.14vw - 1.96vw);
+  }
+  main section.cardContent div.card {
+    min-height: 75px;
+  }
+  main section.cardContent div.card div.theme {
+    width: 33.38vw;
+  }
+  main section.cardContent div.card div.theme a.themeName {
+    font-size: 1.1rem;
+  }
+  main section.cardContent div.card div.table {
+    width: 29.58vw;
+  }
+  main section.cardContent div.card div.table table.dateAndPlace {
+    font-size: 0.8rem;
+  }
+  main section.cardContent div.card div.table table.dateAndPlace tr td.redDate {
+    width: 9.67vw;
+  }
+  main section.cardContent div.card div.table table.dateAndPlace tr td.redPlace {
+    width: 9.67vw;
+  }
+  main section.cardContent div.card div.table table.dateAndPlace tr td.dateContent {
+    width: 21.22vw;
+  }
+  main section.cardContent div.card div.table table.dateAndPlace tr td.placeContent {
+    width: 21.22vw;
+  }
+  main button.backToTop {
     top: 90Vh;
+    left: 90vw;
+  }
+  main div.cardBelow {
+    min-height: 1.96vw;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  header {
+    min-height: 16vw;
+  }
+  header a.enVersion {
+    top: calc(6vw - 16px);
+  }
+  header section.headerLogo div.logoLeft {
+    width: 7.34vw;
+  }
+  header section.headerLogo img.logo {
+    margin-top: 6.19vw;
+    width: 28.13vw;
+    -o-object-fit: contain;
+       object-fit: contain;
+    -o-object-position: bottom;
+       object-position: bottom;
+  }
+  header section.headerLogo div.logoRight {
+    width: 60.86vw;
+  }
+  header section.headerLogo div.logoRight nav {
+    margin-left: 18vw;
+    width: 40vw;
+  }
+  header section.headerLogo div.logoRight nav ul li {
+    font-size: 0.85rem;
+  }
+  header section.headerLogo div.logoRight nav ul li a {
+    margin-right: 1.57vw;
+  }
+  main {
+    min-height: calc(100vh - 16vw - 20vw);
+  }
+  main section.cardContent {
+    min-height: calc(100vh - 16vw - 20vw - 3.14vw - 1.96vw);
+  }
+  main section.cardContent div.card {
+    min-height: 100px;
+  }
+  main section.cardContent div.card div.table table.dateAndPlace tr td.placeContent {
+    width: 25vw;
+  }
+  main section.cardContent div.cardSpace {
+    height: 2vw;
   }
   footer {
     height: 20vW;
@@ -314,6 +442,7 @@ footer section.claim p {
     pointer-events: none;
     padding: 0;
     margin: 0;
+    display: none;
   }
   * .mb,
   * .mbBackToTop,
@@ -324,6 +453,7 @@ footer section.claim p {
   * .mobile {
     opacity: 1;
     pointer-events: all;
+    display: initial;
   }
   header section.headerLogo {
     -webkit-box-orient: vertical;
@@ -337,6 +467,7 @@ footer section.claim p {
   header section.headerLogo div.logoLeft {
     height: 0;
     width: 0;
+    display: none;
   }
   header section.headerLogo img.logo {
     margin-top: 5.33vw;
@@ -369,6 +500,7 @@ footer section.claim p {
     height: 0;
     width: 0;
     pointer-events: none;
+    display: none;
   }
   div.mobile {
     height: auto;
@@ -472,6 +604,9 @@ footer section.claim p {
     left: 64vw;
     top: 30.4vw;
   }
+  div.mobile div.mobileSpace {
+    min-height: 8vw;
+  }
   footer {
     height: 51.73vw;
     -webkit-box-orient: vertical;
@@ -493,6 +628,7 @@ footer section.claim p {
     width: auto;
     position: absolute;
     top: 18.67vw;
+    left: 0;
   }
   footer section.tnGvn div.mobileFooter p {
     color: #9a9a9a;

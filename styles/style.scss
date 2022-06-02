@@ -1,15 +1,383 @@
 * {
-    font-family: "Noto Sans Tc", sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    button:hover {
-            cursor: pointer;
+  font-family: "Noto Sans Tc", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  button:hover {
+      cursor: pointer;
+  }
+  a {
+    text-decoration: none;
+  }
+  // 使手機相關初始為不顯現
+  .mb, 
+  .mbBackToTop, 
+  .mobileFooter,
+  .mobileBottom,
+  .mobileLogin,
+  .mobileEn,
+  .mobile {
+    // padding: 0;
+    // margin: 0;
+    // opacity: 0;
+    // height: 0;
+    // width: 0;
+    // pointer-events: none;
+    // 沒有這行會導致網頁底下大片空白
+    display: none;
+  }
+}
+// html {
+//   height: 100%;
+// }
+header {
+  min-height: 10.42vw;
+  position: relative;
+  a.enVersion {
+    color: #F9665C;
+    position: absolute;
+    top: calc(3.19vw - 16px);
+    left: calc(84.93vw - 16px);
+  }
+  section.headerLogo {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    div.logoLeft {
+      width: 10.34vw;
+      border-bottom: 2px solid #e1e1e1;
     }
-    a {
-        text-decoration: none;
+    img.logo {
+      margin-top: 3.19vw;
+      width: 20.13vw;
+      object-fit: contain;
+      object-position: bottom;
     }
-    // 使手機相關初始為不顯現
+    div.logoRight {
+      display: flex;
+      width: 64.86vw;
+      border-bottom: 2px solid #e1e1e1;
+      nav {
+        display: flex;
+        margin-left: 23.40vw;
+        width: 28.61vw;
+        ul {
+          display: flex;
+          list-style: none;
+          justify-content: space-between;
+          li {
+            display: flex;
+            align-items: flex-end;
+            a {
+              margin-right: 2.57vw;
+              color: #9a9a9a;
+              padding: 0 1.5vw 2.0vw 1.5vw;
+            }
+            a.active {
+              color: #000;
+              border-bottom: 1.82px solid #F9665C;
+              transform: translateY(1.82px);
+            }
+            button {
+              color: #ffffff;
+              background-color: #F9665C;
+              padding: 1.25vw 1.04vw 1.25vw 1.04vw;
+              margin-bottom: 0.63vw;
+              border: none;
+              border-radius: 0.35vw;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+main {
+  // min-height: 44.51vw;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 10.42vw - 9.38vw);
+  div.cardOnTop {
+    min-height: 5.14vw;
+  }
+  section.cardContent {
+    min-height: calc(100vh - 10.42vw - 9.38vw - 5.14vw - 3.96vw );
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    div.cardSpace {
+      height: 0.97vw;
+    }
+    div.card {
+      box-shadow: 1px 1px 2.5px 0px #c0c0c0, -1px -1px 2.5px 0px #c0c0c0;
+      display: flex;
+      div.cardImg {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+      }
+      img {
+        margin: 1.67vw 3.47vw 1.67vw 1.81vw;
+      }
+      div.theme {
+        width: 29.38vw;
+        display: flex;
+        align-items: center;
+        a.themeName {
+          font-size: 1.5625rem;
+          text-decoration: none;
+          color: #6b6b6b;
+        }
+      }
+      div.table {
+        display: flex;
+        width: 29.58vw;
+        table.dateAndPlace {
+          tr {
+            td {
+              height: 1.81vw;
+            }
+            td.redDate {
+              color: #F9665C;
+              width: 6.67vw;
+            }
+            td.redPlace {
+              color: #F9665C;
+              width: 6.67vw;
+            }
+            td.dateContent {
+              width: 17.22vw;
+            }
+            td.placeContent {
+              width: 17.22vw;
+            }
+          }
+        }
+      }
+    }
+  }
+  button.backToTop {
+    border: none;
+    border-radius: 0.35vw;
+    z-index: 5;
+    position: fixed;
+    top: 80vh;
+    left: 95vw;
+  }
+  div.cardBelow {
+    min-height: 3.96vw;
+  }
+}
+footer {
+  display: flex;
+  width: 100vw;
+  min-height: 9.38vw;
+  background-color: #f3f3f3;
+  position: relative;
+  justify-content: space-between;
+  section {
+    &.tnGvn {
+      margin-left: 12.64vw;
+      img.pc {
+        margin-top: 1.25vw;
+        height: 3.61vw;
+      }
+    }
+    &.helper {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      margin-right: 11.67vw;
+      img.helper1 {
+        height: 3.06vw;
+      }
+      img.helper2 {
+        height: 2.5vw;
+      }
+      img.mb {
+        height: 0;
+      }
+    }
+    &.claim {
+      position: absolute;
+      top: 50%;
+      margin-left: 12.64vw;
+      p {
+        color: #9a9a9a;
+        font-size: 0.97vw;
+      }
+    }
+  }
+  
+}
+@media screen and (max-width: 1265px) {
+  header {
+    a.enVersion {
+      font-size: 0.85rem;
+      left: calc(88.93vw - 16px);
+    }
+    section.headerLogo {
+      div.logoLeft {
+        width: 7.34vw;
+      }
+      div.logoRight {
+        width: 68.86vw;
+        nav {
+          margin-left: 30.40vw;
+          ul {
+            li {
+              font-size: 0.85rem;
+              a {
+                margin-right: 1.57vw;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  main {
+    div.cardOnTop {
+      min-height: 3.14vw;
+    }
+    section.cardContent {
+      min-height: calc(100vh - 10.42vw - 9.38vw - 3.14vw - 1.96vw );
+      div.card {
+        min-height: 75px;
+        div.theme {
+          width: 33.38vw;
+          a.themeName {
+            font-size: 1.1rem;
+          }
+        }
+        div.table {
+          width: 29.58vw;
+          table.dateAndPlace {
+            font-size: 0.8rem;
+            tr {
+              td.redDate {
+                width: 9.67vw;
+              }
+              td.redPlace {
+                width: 9.67vw;
+              }
+              td.dateContent {
+                width: 21.22vw;
+              }
+              td.placeContent {
+                width: 21.22vw;
+              }
+            }
+          }
+        }
+      }
+    }
+    button.backToTop {
+      top: 90Vh;
+      left: 90vw;
+    }
+    div.cardBelow {
+      min-height: 1.96vw;
+    }
+  }    
+}
+@media screen and (max-width: 950px) {
+  header {
+    a.enVersion {
+      top: calc(6vw - 16px);
+    }
+    min-height: 16vw;
+    section.headerLogo {
+      div.logoLeft {
+        width: 7.34vw;
+      }
+      img.logo {
+        margin-top: 6.19vw;
+        width: 28.13vw;
+        object-fit: contain;
+        object-position: bottom;
+      }
+      div.logoRight {
+        width: 60.86vw;
+        nav {
+          margin-left: 18vw;
+          width: 40vw;
+          ul {
+            li {
+              font-size: 0.85rem;
+              a {
+                margin-right: 1.57vw;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  main {
+    min-height: calc(100vh - 16vw - 20vw);
+    section.cardContent {
+      min-height: calc(100vh - 16vw - 20vw - 3.14vw - 1.96vw );
+      div.card {
+        min-height: 100px;
+        div.table {
+          table.dateAndPlace {
+            tr {
+              td.placeContent {
+                width: 25vw;
+              }
+            }
+          } 
+        }
+      } 
+      div.cardSpace {
+        height: 2vw;
+      }
+    }
+  }
+  footer {
+    height: 20vW;
+    section.tnGvn {
+      margin-left: 12.64vw;
+      img.pc {
+        margin-top: 2.50vw;
+        height: 7.22vw;
+      }
+    }
+    section.helper {
+      img.helper1 {
+        height: 6.12vw;
+      }
+      img.helper2 {
+        height: 5vw;
+      }
+      img.mb {
+        height: 0;
+      }
+    }
+    section.claim {
+      position: absolute;
+      top: 50%;
+      margin-left: 12.64vw;
+      p {
+        font-size: 1.94vw;
+      }
+    }
+  }
+}
+@media screen and (max-width: 650px) {
+  * {
+    .pc {
+      width: 0;
+      height: 0;
+      opacity: 0;
+      pointer-events: none;
+      padding: 0;
+      margin: 0;
+      display: none;
+    }
     .mb, 
     .mbBackToTop, 
     .mobileFooter,
@@ -17,461 +385,229 @@
     .mobileLogin,
     .mobileEn,
     .mobile {
-        padding: 0;
-        margin: 0;
-        opacity: 0;
-        height: 0;
-        width: 0;
-        pointer-events: none;
+      opacity: 1;
+      pointer-events: all;
+      display: initial;
     }
-}
-header {
-    section.enVersion {
-        display: flex;
-        a {
-            display: block;
-            width: 86.66vw;
-            text-align: right;
-            margin-top: 47px;
-            color: #F9665C;
-        }
-    }
+  }
+  header {
     section.headerLogo {
-        width: 100vw;
-        display: flex;
-        justify-content: space-between;
-        div.logoLeft {
-            width: 10.34vw;
-            border-bottom: 2px solid #e1e1e1;
-        }
-        img.logo {
-            width: 20.13vw;
-            object-fit: contain;
-            object-position: bottom;
-        }
-        div.logoRight {
-            display: flex;
-            width: 64.86vw;
-            border-bottom: 2px solid #e1e1e1;
-            nav {
-                display: flex;
-                margin-left: 23.40vw;
-                width: 28.61vw;
-                ul {
-                    display: flex;
-                    list-style: none;
-                    justify-content: space-between;
-                    li {
-                        display: flex;
-                        align-items: flex-end;
-                        a {
-                            margin-right: 2.57vw;
-                            color: #9a9a9a;
-                            padding: 0 1.5vw 2.0vw 1.5vw;
-                        }
-                        a.active {
-                            color: #000;
-                            border-bottom: 1.82px solid #F9665C;
-                            transform: translateY(1.82px);
-                        }
-                        button {
-                            color: #ffffff;
-                            background-color: #F9665C;
-                            padding: 1.25vw 1.04vw 1.25vw 1.04vw;
-                            margin-bottom: 0.63vw;
-                            border: none;
-                            border-radius: 0.35vw;
-                        }
-                        
-                    }
-                }
-            }
-        }
-    }
-}
-main {
-    div.card {
-        margin: 0 15.07vw 0.97vw 14.03vw;
-        box-shadow: 1px 1px 2.5px 0px #c0c0c0, -1px -1px 2.5px 0px #c0c0c0;
-        display: flex;
-        img {
-            margin: 1.67vw 3.47vw 1.67vw 1.81vw;
-        }
-        div.theme {
-            width: 29.38vw;
-            display: flex;
-            align-items: center;
-            a.themeName {
-                font-size: 1.5625rem;
-                text-decoration: none;
-                color: #6b6b6b;
-            }
-        }
-        div.table {
-            display: flex;
-            width: 29.58vw;
-            align-items: center;
-            table.dateAndPlace {
-                tr {
-                    td {
-                        height: 1.81vw;
-                    }
-                    td.redDate {
-                        color: #F9665C;
-                        width: 6.67vw;
-                    }
-                    td.redPlace {
-                        color: #F9665C;
-                        width: 6.67vw;
-                    }
-                    td.dateContent {
-                        width: 17.22vw;
-                    }
-                    td.placeContent {
-                        width: 17.22vw;
-                    }
-                }
-            }
-        }
-    }
-    div.card1 {
-        margin-top: 5.14vw;
-    }
-    div.btnToTop {
-        height: 3.96vw;
-        width: 97.01vw;
-        display: flex;
-        justify-content: right;
-        button.backToTop {
-            border: none;
-            border-radius: 0.35vw;
-            z-index: 5;
-            position: fixed;
-            top: 85vh;
-        }
-    }
-}
-footer {
-    display: flex;
-    width: 100vw;
-    height: 9.38vw;
-    background-color: #f3f3f3;
-    position: relative;
-    justify-content: space-between;
-    section {
-        &.tnGvn {
-            margin-left: 12.64vw;
-            img.pc {
-                margin-top: 1.25vw;
-                height: 3.61vw;
-            }
-        }
-        &.helper {
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            justify-content: center;
-            margin-right: 11.67vw;
-            img.helper1 {
-                height: 3.06vw;
-            }
-            img.helper2 {
-                height: 2.5vw;
-            }
-            img.mb {
-                height: 0;
-            }
-        }
-        &.claim {
-            position: absolute;
-            top: 50%;
-            margin-left: 12.64vw;
-            p {
-                color: #9a9a9a;
-                font-size: 0.97vw;
-            }
-        }
-    }
-    
-}
-@media screen and (max-width: 950px) {
-    main {
-        div.card {
-            div.theme {
-                a.themeName {
-                    font-size: 1rem;
-                }
-            }
-        }
-        div.btnToTop {
-            button.backToTop {
-                top: 90Vh;
-            }
-        }
-    } 
-    footer {
-        height: 20vW;
-        section.tnGvn {
-            margin-left: 12.64vw;
-            img.pc {
-                margin-top: 2.50vw;
-                height: 7.22vw;
-            }
-        }
-        section.helper {
-            img.helper1 {
-                height: 6.12vw;
-            }
-            img.helper2 {
-                height: 5vw;
-            }
-            img.mb {
-                height: 0;
-            }
-        }
-        section.claim {
-            position: absolute;
-            top: 50%;
-            margin-left: 12.64vw;
-            p {
-                font-size: 1.94vw;
-            }
-        }
-    }   
-}
-@media screen and (max-width: 650px) {
-    * {
-        .pc {
-            width: 0;
-            height: 0;
-            opacity: 0;
-            pointer-events: none;
-            padding: 0;
-            margin: 0;
-        }
-        .mb, 
-        .mbBackToTop, 
-        .mobileFooter,
-        .mobileBottom,
-        .mobileLogin,
-        .mobileEn,
-        .mobile {
-            opacity: 1;
-            pointer-events: all;
-        }
-    }
-    header {
-        section.headerLogo {
-            flex-direction: column;
-            align-items: center;
-            div.logoLeft {
-                height: 0;
-                width: 0;
-            }
-            // 簡易的換img的做法
-            // img.logo {
-            //     content: url("../picture/ui/mobile/mobile_tnGvn.svg");
-            // }
-            // 練習換img的較嚴謹的做法 
-            // img.logo[src*="./picture/ui/logo.svg"] {
-            //     background-image: url("../picture/ui/mobile/mobile_tnGvn.svg");
-            //     background-size: contain ;
-            //     background-repeat: no-repeat;
-            //     background-position: center;
-            //     width: 92.21vw;
-            //     height: 0px !important;
-            //     height /**/: 33.07vw;
-            //     padding: 33.07vw 0 0 0;
-            // }
-            img.logo {
-                margin-top: 5.33vw;
-                margin-bottom: 11.47vw;
-                width: 92.21vw;
-            }
-            div.logoRight {
-                width: 100vw;
-                nav {
-                    margin: 0;
-                    ul {
-                        li {
-                            align-items: center;
-                            a {
-                                margin: 0;
-                                padding: 0;
-                                text-align: center;
-                                width: 45.87vw;
-                                height: 8.27vw;
-                            }
-                            a.mobileLeft {
-                                margin-left: 4vw;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-    main {
-        opacity: 0;
+      flex-direction: column;
+      align-items: center;
+      div.logoLeft {
         height: 0;
         width: 0;
-        pointer-events: none;
+        display: none;
+      }
+      // 簡易的換img的做法
+      // img.logo {
+      //     content: url("../picture/ui/mobile/mobile_tnGvn.svg");
+      // }
+      // 練習換img的較嚴謹的做法 
+      // img.logo[src*="./picture/ui/logo.svg"] {
+      //     background-image: url("../picture/ui/mobile/mobile_tnGvn.svg");
+      //     background-size: contain ;
+      //     background-repeat: no-repeat;
+      //     background-position: center;
+      //     width: 92.21vw;
+      //     height: 0px !important;
+      //     height /**/: 33.07vw;
+      //     padding: 33.07vw 0 0 0;
+      // }
+      img.logo {
+        margin-top: 5.33vw;
+        margin-bottom: 11.47vw;
+        width: 92.21vw;
+      }
+      div.logoRight {
+        width: 100vw;
+        nav {
+          margin: 0;
+          ul {
+            li {
+              align-items: center;
+              a {
+                margin: 0;
+                padding: 0;
+                text-align: center;
+                width: 45.87vw;
+                height: 8.27vw;
+              }
+              a.mobileLeft {
+                margin-left: 4vw;
+              }
+            }
+          }
+        }
+      }
     }
-    div.mobile {
-        height: auto;
-        width: auto;
+  }
+  main {
+    opacity: 0;
+    height: 0;
+    width: 0;
+    pointer-events: none;
+    display: none;
+  }
+  div.mobile {
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    div.table {
+      margin-left: 4vw;
+      display: flex;
+      width: 85.33vw;
+      align-items: center;
+      justify-content: center;
+      table.dateAndPlace {
+        tr {
+          td {
+            height: 6.67vw;
+          }
+          td.redDate {
+            color: #F9665C;
+            width: 19.47vw;
+          }
+          td.redPlace {
+            color: #F9665C;
+            width: 19.47vw;
+          }
+          td.dateContent {
+            width: 65.06vw;
+          }
+          td.placeContent {
+            width: 65.06vw;
+          }
+        }
+      }
+    }
+    div.in,
+    div.out {
+      width: 100vw;
+      div.titleIn,
+      div.titleOut {
+        display: flex;
+        align-items: center;
+        height: 16.80vw;
+        margin: 4vw;
+        border-bottom: 2px solid #f66;
+        p {
+          font-size: 4.53vw;
+          color: #f66;
+        }
+      }
+      div.card {
+        position: relative;
+        box-shadow: 1px 1px 2.5px 0px #c0c0c0, -1px -1px 2.5px 0px #c0c0c0;
+        height: 40.80vw;
+        width: 92.53vw;
+        margin: 0 4vw 4vw 4vw;
         display: flex;
         flex-direction: column;
-        div.table {
-            margin-left: 4vw;
-            display: flex;
-            width: 85.33vw;
-            align-items: center;
-            justify-content: center;
-            table.dateAndPlace {
-                tr {
-                    td {
-                        height: 6.67vw;
-                    }
-                    td.redDate {
-                        color: #F9665C;
-                        width: 19.47vw;
-                    }
-                    td.redPlace {
-                        color: #F9665C;
-                        width: 19.47vw;
-                    }
-                    td.dateContent {
-                        width: 65.06vw;
-                    }
-                    td.placeContent {
-                        width: 65.06vw;
-                    }
-                }
-            }
+        a {
+          margin-left: 4vw;
+          font-size: 5.33vw;
+          color: #6b6b6b;
         }
-        div.in,
-        div.out {
-            width: 100vw;
-            div.titleIn,
-            div.titleOut {
-                display: flex;
-                align-items: center;
-                height: 16.80vw;
-                margin: 4vw;
-                border-bottom: 2px solid #f66;
-                p {
-                    font-size: 4.53vw;
-                    color: #f66;
-                }
-            }
-            div.card {
-                position: relative;
-                box-shadow: 1px 1px 2.5px 0px #c0c0c0, -1px -1px 2.5px 0px #c0c0c0;
-                height: 40.80vw;
-                width: 92.53vw;
-                margin: 0 4vw 4vw 4vw;
-                display: flex;
-                flex-direction: column;
-                a {
-                    margin-left: 4vw;
-                    font-size: 5.33vw;
-                    color: #6b6b6b;
-                }
-                td.redDate, 
-                td.redPlace {
-                    color: #f66;
-                }
-                img {
-                    position: absolute;
-                    width: 25.33vw;
-                    height: 6.93vw;
-                    left: 64vw;
-                    top: 30.4vw;
-                }
-            }
+        td.redDate, 
+        td.redPlace {
+          color: #f66;
         }
+        img {
+          position: absolute;
+          width: 25.33vw;
+          height: 6.93vw;
+          left: 64vw;
+          top: 30.4vw;
+        }
+      }
     }
-    footer {
-        height: 51.73vw;
-        flex-direction: column;
-        section.tnGvn {
-            img.mb {
-                margin-top: 4vw;
-                height: 14.67vw;
-                width: auto;
-            }
-            margin-left: 4vw;
-            position: relative;
-            div.mobileFooter {
-                height: auto;
-                width: auto;
-                position: absolute;
-                top: 18.67vw;  
-                p {
-                    color: #9a9a9a;
-                }  
-            }
-            button.mbBackToTop {
-                height: auto;
-                width: auto;
-                border: none;
-                border-radius: 0.35vw;
-                z-index: 5;
-                position: absolute;
-                top: 3.47vw;
-                left: 83.2vw;
-            }
-        }
-        section.helper {
-            position: absolute;
-            left: 10%;
-            top: 50%;
-            justify-content: center;
-            flex-direction: row;
-            img.helper1 {
-                content: url(../picture/ui/mobile/蕭壠.svg);
-                width: 39.2vw;
-                height: auto;
-            }
-            img.helper2 {
-                content: url(../picture/ui/mobile/總爺.svg);
-                width: 32.54vw;
-                height: auto;
-            }
-            img.pc {
-                height: 0;
-                width: 0;
-            }
-        }
-        section.claim {
-            p {
-                font-size: 3.73vw;
-            }
-            left: -7.5%;
-            top: 70%;
-        }
+    div.mobileSpace {
+      min-height: 8vw;
     }
-    div.mobileBottom {
+  }
+  footer {
+    height: 51.73vw;
+    flex-direction: column;
+    section.tnGvn {
+      img.mb {
+        margin-top: 4vw;
+        height: 14.67vw;
         width: auto;
+      }
+      margin-left: 4vw;
+      position: relative;
+      div.mobileFooter {
         height: auto;
-        display: flex;
-        button {
-            color: #ffffff;
-            width: 50vw;
-            border: none;
-            height: 13.87vw;
-            text-align: center;
-            font-size: 4.53vW;
-            img {
-                vertical-align: middle;    
-            }
-        }
-        button.mobileLogin {
-            background-color: #f66;
-        }
-        button.mobileEn {
-            background-color: #ff7575;
-        }
+        width: auto;
+        position: absolute;
+        top: 18.67vw;
+        left: 0;
+        p {
+          color: #9a9a9a;
+        }  
+      }
+      button.mbBackToTop {
+        height: auto;
+        width: auto;
+        border: none;
+        border-radius: 0.35vw;
+        z-index: 5;
+        position: absolute;
+        top: 3.47vw;
+        left: 83.2vw;
+      }
     }
+    section.helper {
+      position: absolute;
+      left: 10%;
+      top: 50%;
+      justify-content: center;
+      flex-direction: row;
+      img.helper1 {
+        content: url(../picture/ui/mobile/蕭壠.svg);
+        width: 39.2vw;
+        height: auto;
+      }
+      img.helper2 {
+        content: url(../picture/ui/mobile/總爺.svg);
+        width: 32.54vw;
+        height: auto;
+      }
+      img.pc {
+        height: 0;
+        width: 0;
+      }
+    }
+    section.claim {
+      p {
+        font-size: 3.73vw;
+      }
+      left: -7.5%;
+      top: 70%;
+    }
+  }
+  div.mobileBottom {
+    width: auto;
+    height: auto;
+    display: flex;
+    button {
+      color: #ffffff;
+      width: 50vw;
+      border: none;
+      height: 13.87vw;
+      text-align: center;
+      font-size: 4.53vW;
+      img {
+        vertical-align: middle;    
+      }
+    }
+    button.mobileLogin {
+      background-color: #f66;
+    }
+    button.mobileEn {
+      background-color: #ff7575;
+    }
+  }
 }
